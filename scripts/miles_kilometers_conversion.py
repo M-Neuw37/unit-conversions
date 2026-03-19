@@ -5,6 +5,47 @@ Created on Thu Mar 19 19:55:17 2026
 @author: micha
 """
 
+"""
+Script that uses two different menus to navigate to the desired conversion.
+
+The main menu 'MS_KM_conversion_menu()' asks the user to chose whether they want to convert speed or distance
+based on the letter they enter. The captital letter after the dash is the letter that is to be entered to select that option
+which is NOT sensitive to the case entered (k or K)
+---
+Choose what you want to convert:
+Speed - S # <- enter 'S' or 's' to select speed. 
+Distance - D
+Quit - Q
+Enter your choice:
+---
+Once the user selects what they want to convet they are brought to another menu, 
+but this one is to select what way they want to convert the speed or distance. 
+Either Mph -> K/mh or K/mh -> Mph OR Miles -> Kilometers or Kilometers -> Miles. 
+
+The function 'choose_speed()' is the menu to choose Mph -> K/mh or K/mh -> Mph. 
+---
+Mph -> Kph - K
+Kph -> Mph - M
+Return to the main menu - R
+Enter your choice:
+---
+
+the function 'choose_distance()' is the menu to choose Miles -> Kilometers or Kilometers -> Miles
+---
+Miles -> Kilometers - K
+Kilometers -> Miles - M
+Return to the main menu - R
+Enter your choice:
+---
+An example output from the 'choose_distance()' is given below. The user enters the number of the unit they want to be converted 
+into the other unit.
+---
+Convert miles (m) to kilometers (k) below
+Enter the distance in miles: 70
+70.0 miles in kilometers is 112.65 kilometers
+---
+"""
+
 def choose_speed():
     
     choice  =input(
